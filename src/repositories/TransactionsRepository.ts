@@ -51,7 +51,7 @@ class TransactionsRepository {
     if (type === 'outcome') {
       const { total } = this.getBalance();
       if (value > total) {
-        throw Error('Saldo insuficiente');
+        throw new Error('Saldo insuficiente');
       }
     }
 
